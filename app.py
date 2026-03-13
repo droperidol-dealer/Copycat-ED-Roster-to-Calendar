@@ -8,7 +8,7 @@ uploaded_file = st.file_uploader("Upload Roster (Excel)", type=["xlsx"])
 
 if uploaded_file:
     # Based on your image: Dates are Row 6 (index 5), Names are Col D (index 3)
-    df = pd.read_excel(uploaded_file, header=5)
+    df = pd.read_excel(uploaded_file, header=3)
     name_col = df.columns[3]
     date_cols = df.columns[4:]
     
